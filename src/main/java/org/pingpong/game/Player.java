@@ -3,7 +3,7 @@ package org.pingpong.game;
 /**
  * <code>Player</code> represents a real game player
  *
- * It contains opponent player object for communication and a stroke counter.
+ * It contains opponent player object and a stroke counter.
  * Each stroke increments strokeCounter and will influence on game process.
  * After GAME_STROKES number achieved, the game will be over.
  */
