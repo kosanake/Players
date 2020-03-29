@@ -1,4 +1,4 @@
-package org.pingpong.game;
+package org.pingpong.game.local;
 
 import java.io.Closeable;
 

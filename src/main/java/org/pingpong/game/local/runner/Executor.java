@@ -1,7 +1,7 @@
-package org.pingpong.runner;
+package org.pingpong.game.local.runner;
 
-import org.pingpong.game.PingPongPlayer;
-import org.pingpong.game.Player;
+import org.pingpong.game.local.PingPongPlayer;
+import org.pingpong.game.local.Player;
 
 import java.io.IOException;
 

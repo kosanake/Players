@@ -1,4 +1,4 @@
-package org.pingpong.game;
+package org.pingpong.game.local;
 
 /**
  * <code>Player</code> represents a real game player
