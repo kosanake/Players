@@ -12,13 +12,13 @@ import java.io.IOException;
 public class Executor {
     public static void main(String[] args) throws IOException {
 
-        try (PingPongPlayer player1 = new Player();
-             PingPongPlayer player2 = new Player()) {
+        try (PingPongPlayer player1 = new Player("Player 1");
+             PingPongPlayer player2 = new Player("Player 2")) {
 
             player1.inviteOpponent(player2);
             player2.inviteOpponent(player1);
 
-            player1.stroke("Game: ");
+            player1.stroke("");
         }
     }
 }

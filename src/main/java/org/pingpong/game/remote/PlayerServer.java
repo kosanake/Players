@@ -13,19 +13,21 @@ import java.rmi.server.UnicastRemoteObject;
  * Each stroke increments strokeCounter and will influence on game process.
  * After GAME_STROKES number achieved, the game will be over.
  */
-public class PlayerServer extends UnicastRemoteObject implements PingPongRemotePlayer {
+public class PlayerServer extends UnicastRemoteObject implements PingPongServerPlayer {
 
+    private String name;
     private int strokeCounter;
 
-    public PlayerServer() throws RemoteException {
+    public PlayerServer(String name) throws RemoteException {
         super(0);
+        this.name = name;
     }
 
     @Override
     public String stroke(String progress) {
         strokeCounter++;
         String currentProgress = progress.concat(" ").concat(Integer.toString(strokeCounter));
-        System.out.println(currentProgress);
+        System.out.println(this + ", message : " + currentProgress);
         return currentProgress;
     }
 
@@ -38,5 +40,10 @@ public class PlayerServer extends UnicastRemoteObject implements PingPongRemoteP
     @Override
     public void close() {
         strokeCounter = 0;
+    }
+
+    @Override
+    public String toString() {
+        return name + " - progress: " + strokeCounter;
     }
 }

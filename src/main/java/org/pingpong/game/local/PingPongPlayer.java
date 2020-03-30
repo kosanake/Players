@@ -4,9 +4,7 @@ import java.io.Closeable;
 
 /**
  * Base activity rules for ping-pong players
- *
- * It is possible, and in fact common, for a Players to implement
- * PingPongPlayer even if someone wants to play by their own rules
+ * It is possible, and in fact common, for a Players to implement PingPongPlayer
  */
 public interface PingPongPlayer extends Closeable {
 
